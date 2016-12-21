@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">锁屏</string>
+    <string name="activeAfterUse">激活后使用</string>
+    <string name="noPermission">取消授权-无法使用-自动关闭</string>
+
+</resources>
