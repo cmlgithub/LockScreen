@@ -8,16 +8,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUESTCODE = 0;
     private DevicePolicyManager mDevicePolicyManager;
     private ComponentName mComponentName;
+    private String xiaoMiBrand = "Xiaomi";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(xiaoMiBrand.equals(android.os.Build.BRAND)){
+            setTheme(R.style.AppTheme);
+        }
 
         //获取设备管理服务
         mDevicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
